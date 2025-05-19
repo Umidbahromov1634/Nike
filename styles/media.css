@@ -1,0 +1,115 @@
+@media (max-width: 880px){ 
+    .footer__inner{
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+    }
+}
+
+@media (max-width: 873px) {
+    .burger-btn {
+      display: flex;
+      z-index: 101;
+    }
+  
+    .nav__inner{
+      padding: 10px 15px;
+    }
+    
+    .nav__list {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: #322e41;
+      flex-direction: column;
+      align-items: center;
+      padding: 5px 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: 0.3s ease;
+      z-index: 100;
+    }
+    
+    .nav__list_link {
+      width: 100%;
+      text-align: center;
+      padding: 15px 0;
+    }
+    
+    .nav__list_link:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+    
+    /* Показываем меню при активации чекбокса */
+    .burger-toggle:checked ~ .nav__list {
+      max-height: 400px; /* Достаточно большое значение для всех пунктов */
+    }
+    
+    /* Анимация бургер-иконки в крестик */
+    .burger-toggle:checked + .burger-btn span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .burger-toggle:checked + .burger-btn span:nth-child(2) {
+      opacity: 0;
+    }
+    
+    .burger-toggle:checked + .burger-btn span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+}
+
+@media (max-width: 865px){
+    .cards{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cards__left{
+        margin-top: 20px;
+    }
+
+    .cards__right{
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: 700px){
+    .cards{
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-top: 15px;
+    }
+
+    .cards__right{
+        justify-content: center;
+    }
+
+    .footer__inner{
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+    }
+}
+
+@media (max-width: 550px){
+    .cards__left{
+        max-width: 400px;
+    }
+
+    .cards__left img{
+        width: 370px;
+    }
+}
+
+@media (max-width: 410px){
+    .cards__left{
+        max-width: 300px;
+    }
+
+    .cards__left img{
+        width: 270px;
+    }
+}
